@@ -53,28 +53,18 @@
 
 您可以使用 PyInstaller 将应用程序打包成独立的可执行文件。
 
-### Windows
+1.  **安装 PyInstaller**：
+    ```bash
+    uv add pyinstaller
+    ```
 
-创建一个名为 `build_windows.bat` 的文件，内容如下：
+2.  **运行打包脚本**：
+    *   **Windows**：双击运行 `build_windows.bat` 脚本。
+    *   **macOS**：在终端中运行 `bash build_mac.sh` 脚本。
 
-```bat
-@echo off
-uv run pyinstaller --noconfirm --onedir --windowed --name "视频分镜工具" --icon "assrt/ico.ico" --add-data "assrt;assrt" main.py
-pause
-```
-
-### macOS
-
-创建一个名为 `build_mac.sh` 的文件，内容如下：
-
-```bash
-#!/bin/bash
-uv run pyinstaller --noconfirm --onedir --windowed --name "视频分镜工具" --icon "assrt/ico.ico" --add-data "assrt:assrt" main.py
-```
+3.  **查看可执行文件**：
+    打包完成后，可执行文件将在项目根目录下的 `dist` 目录中。
 
 **注意**：
-*   在运行打包脚本之前，请确保您已安装 `pyinstaller` (`uv add pyinstaller`)。
-*   `--name "视频分镜工具"` 用于设置打包后应��程序的名称。
-*   `--icon "assrt/ico.ico"` 用于设置应用程序的图标。请确保 `assrt/ico.ico` 文件存在。
-*   `--add-data "assrt;assrt"` (Windows) 和 `--add-data "assrt:assrt"` (macOS) 用于将 `assrt` 文件夹及其内容（包括 `pic.png` 和 `ico.ico`）包含在打包后的应用程序中。
-* 打包完成后，可执行文件将在 `dist` 目录中。
+*   打包脚本已配置软件名称为“视频分镜工具”和图标 `assrt/ico.ico`。请确保 `assrt/ico.ico` 文件存在。
+*   `assrt` 文件夹及其内容（包括 `pic.png` 和 `ico.ico`）将自动包含在打包后的应用程序中。
