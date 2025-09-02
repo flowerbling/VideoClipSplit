@@ -77,4 +77,4 @@ uv run pyinstaller --noconfirm --onedir --windowed --name "视频分镜工具" -
 *   `--name "视频分镜工具"` 用于设置打包后应��程序的名称。
 *   `--icon "assrt/ico.ico"` 用于设置应用程序的图标。请确保 `assrt/ico.ico` 文件存在。
 *   `--add-data "assrt;assrt"` (Windows) 和 `--add-data "assrt:assrt"` (macOS) 用于将 `assrt` 文件夹及其内容（包括 `pic.png` 和 `ico.ico`）包含在打包后的应用程序中。
-*   ���包完成后，可执行文件将在 `dist` 目录中。
+* 打包完成后，可执行文件将在 `dist` 目录中。
